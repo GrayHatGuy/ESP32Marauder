@@ -2,7 +2,7 @@
 <!---[![Gitter](https://badges.gitter.im/justcallmekoko/ESP32Marauder.png)](https://gitter.im/justcallmekoko/ESP32Marauder)--->
 <!---[![Build Status](https://travis-ci.com/justcallmekoko/ESP32Marauder.svg?branch=master)](https://travis-ci.com/justcallmekoko/ESP32Marauder)--->
 <!---Shields/Badges https://shields.io/--->
-
+# [ESP32S3 Pinout T-embed](https://github.com/GrayHatGuy/ESP32Marauder/blob/04a579bbfe8218ca71854dd526a311b33e89f89e/schematics/ESP32s3_pin_Tembed_marauder.pdf)
 # ESP32 Marauder v0.10.1
 <p align="center"><img alt="Marauder logo" src="https://github.com/justcallmekoko/ESP32Marauder/blob/master/pictures/marauder3L.jpg?raw=true" width="300"></p>
 <p align="center">
