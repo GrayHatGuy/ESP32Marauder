@@ -16,7 +16,7 @@
 // ##################################################################################
 
 // Only define one driver, the other ones must be commented out
-#define ILI9341_DRIVER
+//#define ILI9341_DRIVER  //From factory changed to T-embed
 //#define ST7735_DRIVER      // Define additional parameters below for this display
 //#define ILI9163_DRIVER     // Define additional parameters below for this display
 //#define S6D02A1_DRIVER
@@ -25,7 +25,7 @@
 //#define ILI9481_DRIVER
 //#define ILI9486_DRIVER
 //#define ILI9488_DRIVER     // WARNING: Do not connect ILI9488 display SDO to MISO if other devices share the SPI bus (TFT SDO does NOT tristate when CS is high)
-//#define ST7789_DRIVER      // Full configuration option, define additional parameters below for this display
+#define ST7789_DRIVER      // T-embed driver from factory - Full configuration option, define additional parameters below for this display
 //#define ST7789_2_DRIVER    // Minimal configuration option, define additional parameters below for this display
 //#define R61581_DRIVER
 //#define RM68140_DRIVER
@@ -39,7 +39,7 @@
 // For ST7789 ONLY, define the colour order IF the blue and red are swapped on your display
 // Try ONE option at a time to find the correct colour order for your display
 
-//  #define TFT_RGB_ORDER TFT_RGB  // Colour order Red-Green-Blue
+#define TFT_RGB_ORDER TFT_RGB  // T-embed initial set - Colour order Red-Green-Blue
 //  #define TFT_RGB_ORDER TFT_BGR  // Colour order Blue-Green-Red
 
 // For M5Stack ESP32 module with integrated ILI9341 display ONLY, remove // in line below
@@ -157,20 +157,21 @@
 
 // For ESP32 Dev board (only tested with ILI9341 display)
 // The hardware SPI can be mapped to any pins
-
-#define TFT_MISO 19 // Matching T_DO
-#define TFT_MOSI 23 // Matching T_DIN
-#define TFT_SCLK 18 // Matching T_CLK
-#define TFT_CS   17  // Chip select control pin
-#define TFT_DC   16  // Data Command control pin
-#define TFT_RST   5  // Reset pin (could connect to RST pin)
+// T- embed pin updates start
+#define TFT_MISO 13 // Matching T_DO
+#define TFT_MOSI 11 // Matching T_DIN
+#define TFT_SCLK 12 // Matching T_CLK
+#define TFT_CS   10  // Chip select control pin
+#define TFT_DC   17  // Data Command control pin
+#define TFT_RST   9  // Reset pin (could connect to RST pin)
 //#define TFT_RST  -1  // Set TFT_RST to -1 if display RESET is connected to ESP32 board RST
 
-#define TFT_BL   32  // LED back-light (only for ST7789 with backlight control pin)
+#define TFT_BL   16  // LED back-light (only for ST7789 with backlight control pin)
 
-#define TOUCH_CS 21     // Chip select pin (T_CS) of touch screen
+#define TOUCH_CS 4     // Chip select pin (T_CS) of touch screen
 
 //#define TFT_WR 22    // Write strobe for modified Raspberry Pi TFT only
+//T-embed pin updates end
 
 // For the M5Stack module use these #define lines
 //#define TFT_MISO 19
